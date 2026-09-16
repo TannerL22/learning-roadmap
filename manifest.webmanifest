@@ -1,10 +1,10 @@
 {
   "name": "Learning Roadmap",
   "short_name": "Learning",
-  "description": "Personal Japanese, finance, modelling and Excel curriculum tracker.",
+  "description": "A simple daily guide for Japanese, finance, modelling and Excel study.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f5f6f8",
-  "theme_color": "#111827"
+  "background_color": "#f6f6f3",
+  "theme_color": "#f6f6f3"
 }
