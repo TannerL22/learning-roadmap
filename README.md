@@ -27,10 +27,6 @@ Your study logs and completed curriculum tasks are saved in browser `localStorag
 
 ## Editing the curriculum
 
-The curriculum and resource stack are defined near the top of `app.js`:
-- `japaneseRoadmap`
-- `financeRoadmap`
-- `excelRoadmap`
-- `resources`
+The entire app is intentionally self-contained in `index.html`; the Japanese, finance, Excel and resource arrays live in the script section near the bottom. `manifest.webmanifest` enables standalone app behaviour and `sw.js` provides basic offline caching.
 
 No build tools or dependencies are required.
