@@ -1,12 +1,17 @@
 # Learning Roadmap
 
-Personal PWA for tracking Japanese study, finance/project-finance/modelling study, and Excel fluency.
+Personal PWA for Japanese, finance/project-finance/modelling, and Excel fluency.
+
+The product is deliberately simple: open it and immediately see **what to study next, which exact resource to use, how long to spend, and whether you're ahead or behind**.
 
 - Japanese target: 4 hours/week
 - Finance + modelling target: 4 hours/week
+- Excel is folded into the finance track
 - No streaks, points, badges or gamification
-- Daily check-ins and notes
-- Weekly + cumulative ahead/behind tracking
+- One-tap “Done & advance” from the Today screen
+- Exact current resource + quick links
+- Weekly and cumulative ahead/behind tracking
+- Adaptive suggested session length when behind
 - Curriculum/resource roadmap
 - Local-only study history with export/import backup
 - Installable on iPhone from Safari
@@ -23,10 +28,15 @@ Open the published Pages URL in Safari → Share / Page Menu → **Add to Home S
 
 ## Privacy
 
-Your study logs and completed curriculum tasks are saved in browser `localStorage`. They are not committed to GitHub. Use **History → Export backup** periodically.
+Study logs and completed curriculum tasks are saved in browser `localStorage`. They are not committed to GitHub. Use **Log → Export** periodically.
 
-## Editing the curriculum
+## App structure
 
-The entire app is intentionally self-contained in `index.html`; the Japanese, finance, Excel and resource arrays live in the script section near the bottom. `manifest.webmanifest` enables standalone app behaviour and `sw.js` provides basic offline caching.
+- `index.html` — semantic app shell
+- `styles.css` — responsive/mobile-first visual system
+- `data.js` — Japanese, finance, Excel curricula and approved resource stack
+- `app.js` — recommendation, progress, persistence and logging logic
+- `manifest.webmanifest` — standalone PWA configuration
+- `sw.js` — offline caching / update behaviour
 
 No build tools or dependencies are required.
